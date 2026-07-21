@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Servicios y Soluciones | VIZCAYA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#435b9f",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "on-background": "#0b1c30",
+                        "tertiary-container": "#002560",
+                        "surface-technical": "#F8FAFC",
+                        "secondary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#7c2e00",
+                        "secondary": "#a33e00",
+                        "border-muted": "#E2E8F0",
+                        "on-surface": "#0b1c30",
+                        "surface-container-high": "#dce9ff",
+                        "primary-container": "#002366",
+                        "inverse-on-surface": "#eaf1ff",
+                        "background": "#f8f9ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-surface-variant": "#444650",
+                        "tertiary": "#001237",
+                        "on-tertiary": "#ffffff",
+                        "success-electric": "#10B981",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#758dd5",
+                        "secondary-container": "#fe6500",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-secondary-fixed": "#360f00",
+                        "on-tertiary-fixed-variant": "#00419e",
+                        "text-heading": "#0F172A",
+                        "surface-container": "#e5eeff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#dae2ff",
+                        "outline": "#757682",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#b1c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "inverse-primary": "#b3c5ff",
+                        "on-secondary-container": "#541d00",
+                        "outline-variant": "#c5c6d2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-variant": "#d3e4fe",
+                        "primary": "#00113a",
+                        "on-tertiary-container": "#5f8cf3",
+                        "inverse-surface": "#213145",
+                        "on-tertiary-fixed": "#001946",
+                        "on-primary-fixed": "#00174a",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface-technical text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 bg-surface-lowest shadow-sm border-b border-muted">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-bold text-primary flex items-center gap-2" href="#">
+<span class="text-secondary">VIZCAYA</span>
+</a>
+<div class="hidden md:flex gap-6">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Empresa</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Productos</a>
+<a class="text-primary border-b-2 border-secondary font-bold pb-1 font-body-md" href="#">Servicios</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-outline" style="font-size: 20px;">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Buscar productos..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md hover:opacity-90 transition-all active:scale-95">
+                    Cotizar Proyecto
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden bg-primary overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/20 text-secondary-fixed border border-secondary/30 mb-6">
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+<span class="font-label-md">EXPERTOS EN ENERGÍA</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-primary mb-6 max-w-4xl mx-auto">
+                    Soluciones Integrales para la Industria y el Hogar
+                </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mx-auto mb-10">
+                    Suministramos la tecnología y el respaldo técnico necesario para llevar la energía a donde más se necesita, desde proyectos residenciales hasta infraestructura industrial de gran escala.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-secondary text-on-primary px-8 py-4 rounded-lg font-title-md hover:bg-secondary-container transition-all">
+                        Explorar Catálogo
+                    </button>
+<button class="bg-transparent border border-primary-fixed-dim text-on-primary px-8 py-4 rounded-lg font-title-md hover:bg-on-primary/10 transition-all">
+                        Hablar con un Experto
+                    </button>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Nuestros Servicios Especializados</h2>
+<p class="font-body-md text-on-surface-variant max-w-lg">
+                        Ofrecemos un portafolio de servicios diseñado para cubrir el ciclo de vida completo de sus instalaciones eléctricas.
+                    </p>
+</div>
+<div class="hidden md:flex gap-2">
+<div class="w-12 h-1 bg-secondary rounded-full"></div>
+<div class="w-4 h-1 bg-outline-variant rounded-full"></div>
+<div class="w-4 h-1 bg-outline-variant rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 grid-rows-none md:grid-rows-2 gap-6">
+<!-- Suministro de Materiales (Large) -->
+<div class="md:col-span-8 md:row-span-1 glass-card p-8 rounded-xl shadow-sm group hover:shadow-md transition-all">
+<div class="flex flex-col md:flex-row gap-8 h-full">
+<div class="flex-1">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<h3 class="font-title-md text-title-md text-primary mb-3">Suministro de Materiales</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+                                Distribución mayorista y al detal de conductores, tuberías, protecciones y todo lo necesario para sus obras eléctricas con stock inmediato.
+                            </p>
+<a class="flex items-center gap-2 text-secondary font-label-md group-hover:gap-4 transition-all" href="#">
+                                VER DETALLES <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+<div class="flex-1 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up professional photograph of organized electrical components including copper wires, breakers, and conduits in a clean, high-tech industrial warehouse setting with soft blue lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVsiIpwctGiwcFXBHC8hcljYYYv2FSCdnPySAuV-GkOJYA34rc7g2zYfSYYcB7lyrohkAqQgpQYCZxkXiTqdizUgvgibSJhFkW9DAd8n8yqeHiEZAURTvlu1AnGkev3XMH9Ilp4Eqdw0dKJcbAdTgxslNc8jzODOQ8TkJLoVfuFhP3MdPpCX1yLR1HQwmdgnFU3v4Xe9Py-GLdIPGhSreWwo2ELiC_JvpiZJjNV9_q01nPWMb-oVzhV_YaQwFrRv_B8JPDF-U4iwk"/>
+</div>
+</div>
+</div>
+<!-- Iluminación LED (Tall) -->
+<div class="md:col-span-4 md:row-span-2 bg-primary text-on-primary p-8 rounded-xl relative overflow-hidden flex flex-col">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4">light_mode</span>
+<h3 class="font-title-md text-title-md mb-3">Iluminación LED</h3>
+<p class="font-body-md text-primary-fixed-dim mb-8">
+                            Proyectos de eficiencia energética para industrias, oficinas y hogares. Reducimos sus costos de operación con la mejor tecnología.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-success-electric">check_circle</span>
+<span class="font-body-md">Auditorías energéticas</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-success-electric">check_circle</span>
+<span class="font-body-md">Diseño lumínico Dialux</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-success-electric">check_circle</span>
+<span class="font-body-md">Garantía extendida</span>
+</li>
+</ul>
+</div>
+<div class="mt-auto relative z-10">
+<img class="rounded-lg shadow-xl mb-4" data-alt="Ultra-modern architectural lighting design in a sleek industrial office environment with warm LED accents against a dark navy and steel background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8W9TQxPvwrPkY80tYJimlUjh5ePzUhKubbnOdjBvBEb8J3B8SDJPCPBPcdmlfZpVkTdAuWjoJDMtbBL1vtf2wjk8xbluqPAIkOONUtX-ogKTdVcLk7wz7ghnxhOdihBOtogucOxgPJvsN-aYjEaE5qygGXmYIh60Nu6WnNYg4P2Ckt5jSx4uW_ZV05NWXURIFkqLonT4-wmLo-rwvgmCRIslQv6VjdSQI9cToaEITsjnR7LrAZJEuCASk_z_uZNUcJyRjNDlYy_0"/>
+</div>
+<div class="absolute bottom-0 right-0 w-32 h-32 bg-secondary opacity-10 rounded-full blur-3xl"></div>
+</div>
+<!-- Asesoría en Ingeniería (Small) -->
+<div class="md:col-span-4 glass-card p-8 rounded-xl shadow-sm hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">psychology</span>
+<h3 class="font-title-md text-title-md text-primary mb-3">Asesoría en Ingeniería</h3>
+<p class="font-body-md text-on-surface-variant">
+                        Acompañamiento técnico experto para la optimización de recursos y cumplimiento de normatividad RETIE.
+                    </p>
+</div>
+<!-- Proyectos Eléctricos (Small) -->
+<div class="md:col-span-4 glass-card p-8 rounded-xl shadow-sm hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">schema</span>
+<h3 class="font-title-md text-title-md text-primary mb-3">Proyectos Eléctricos</h3>
+<p class="font-body-md text-on-surface-variant">
+                        Ejecución de montajes eléctricos de media y baja tensión bajo los más altos estándares de seguridad.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Catalog Highlight Section -->
+<section class="py-24 bg-surface-container-lowest border-y border-muted">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-muted">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 lg:p-16 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Catálogo de más de 4.000 productos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                                Encuentre exactamente lo que su proyecto necesita. Nuestro sistema de búsqueda inteligente le permite filtrar por marca, especificación técnica y disponibilidad regional.
+                            </p>
+<div class="flex items-center gap-4 p-2 bg-surface-technical rounded-xl border border-outline-variant mb-8">
+<span class="material-symbols-outlined text-outline ml-4">search</span>
+<input class="flex-1 bg-transparent border-none focus:ring-0 py-3 font-body-md" placeholder="Ej: Cable N°12, Breaker 20A, Panel LED..." type="text"/>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md">BUSCAR</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<span class="font-body-md text-on-surface">Entrega rápida</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-body-md text-on-surface">Calidad Certificada</span>
+</div>
+</div>
+</div>
+<div class="relative bg-primary overflow-hidden min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="High-resolution collage of premium electrical hardware, copper coils, circuit breakers, and industrial light fixtures arranged in an aesthetically pleasing geometric pattern, conveying variety and abundance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvt1lK1TNYAOPLR0rHnVtAaoow_Z50bGFk2ZxFh927mlXLnvNbg1e85nbafCBF7PgCS56b8pKGGb3ncq3vQpeDp6iNbFs5XBARQ0MtfFEhwWisRsbd0UX3Dco4Z7xl1yhCxuGZR95EKxu-BuxPAjPG3Py-SXxmIAWoqfbPb_oMlRjxLLwZksNIS9YJfO4BsyiReVC8fMjixzn-CRTZkmbGuHQwgnOAquQLr4Na-hqkPYVMp1zzS63AHzUurwiRqRliHnLzuS1SNho"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<div class="text-secondary text-[120px] font-black leading-none opacity-20">4K+</div>
+<div class="text-on-primary font-title-md -mt-10 tracking-[0.2em]">PRODUCTOS EN STOCK</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Partners -->
+<section class="py-20 bg-surface-technical">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<p class="font-label-md text-outline uppercase tracking-widest mb-12">Marcas de confianza que nos respaldan</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="font-headline-lg font-extrabold text-primary">PHILIPS</span>
+<span class="font-headline-lg font-extrabold text-primary">SCHNEIDER</span>
+<span class="font-headline-lg font-extrabold text-primary">SIEMENS</span>
+<span class="font-headline-lg font-extrabold text-primary">ABB</span>
+<span class="font-headline-lg font-extrabold text-primary">GENERAL ELECTRIC</span>
+</div>
+</div>
+</section>
+<!-- Regional Distribution Banner -->
+<section class="py-24 bg-surface-container-high relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-12 relative z-10">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Distribución Regional</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">
+                        Con sedes estratégicas en Colombia y Venezuela, el Grupo Empresarial Vizcaya garantiza una cadena de suministro robusta para toda la región.
+                    </p>
+<div class="flex gap-4">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-muted flex-1">
+<div class="font-title-md text-primary mb-1">Colombia</div>
+<div class="font-body-md text-on-surface-variant">Sede Principal Bogotá</div>
+<a class="text-secondary font-label-md mt-4 inline-block" href="#">VER MAPA</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-muted flex-1">
+<div class="font-title-md text-primary mb-1">Venezuela</div>
+<div class="font-body-md text-on-surface-variant">Centro Logístico Valencia</div>
+<a class="text-secondary font-label-md mt-4 inline-block" href="#">VER MAPA</a>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A stylized, clean digital map showing the North-Western region of South America with focal points on Colombia and Venezuela, using the primary navy and secondary orange colors to mark distribution hubs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZlFAa7duojyVTfQXfneiqiXAEK9tvpnNEBnyR4NEUN3vwHsQCmRZlo9VGzzDTduzaFA_Ob_9T5lKcQIrvAsamFQK97lnICrPLdGAdqtMXVOoufwIxiMdjgtNkBFE9F1UqmfYlur1ZMTgCAtklrT0lGxM4-JUhDYPHqFsfbQGL1TzCWN9qz1Ns7rKt14pz-jRlCvhi7rS_SySS8zu_DzhV4G3UZy-MOTOOInG2k74H1zNGu0PKOqTSYNOe1Kc4gYNQBSBhucEiXs"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<a class="font-title-md text-title-md text-on-primary font-black mb-6 inline-block" href="#">VIZCAYA</a>
+<p class="font-body-md text-primary-fixed-dim mb-6">
+                        Experiencia, confianza y compromiso en soluciones eléctricas integrales para toda la región.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-lowest/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-lowest/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-title-md text-on-primary mb-6">Empresa</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Nosotros</a></li>
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Grupo Vizcaya</a></li>
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Sedes</a></li>
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Trabaja con nosotros</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-md text-on-primary mb-6">Servicios</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Venta Técnica</a></li>
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Proyectos Industriales</a></li>
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Consultoría RETIE</a></li>
+<li><a class="font-body-md text-primary-fixed-dim hover:text-on-primary transition-colors" href="#">Certificaciones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-md text-on-primary mb-6">Newsletter</h4>
+<p class="font-body-md text-primary-fixed-dim mb-4">Suscríbete para recibir actualizaciones técnicas y ofertas.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-lowest/10 border-transparent rounded-lg focus:ring-secondary focus:border-secondary text-on-primary w-full px-4" placeholder="Email" type="email"/>
+<button class="bg-secondary text-on-primary px-4 py-2 rounded-lg font-label-md">IR</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-surface-container-lowest/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-primary-fixed-dim text-sm">
+                    © 2024 Ferre Eléctricos Vizcaya. Todos los derechos reservados.
+                </p>
+<div class="flex gap-6">
+<a class="font-body-md text-primary-fixed-dim text-sm hover:text-on-primary transition-colors underline decoration-secondary-container" href="#">Aviso Legal</a>
+<a class="font-body-md text-primary-fixed-dim text-sm hover:text-on-primary transition-colors underline decoration-secondary-container" href="#">Privacidad</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Select elements to animate
+            const animateElements = document.querySelectorAll('.glass-card, h1, h2, section > div > p');
+            animateElements.forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nuestra Empresa | Ferre Eléctricos Vizcaya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#435b9f",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "on-background": "#0b1c30",
+                        "tertiary-container": "#002560",
+                        "surface-technical": "#F8FAFC",
+                        "secondary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#7c2e00",
+                        "secondary": "#a33e00",
+                        "border-muted": "#E2E8F0",
+                        "on-surface": "#0b1c30",
+                        "surface-container-high": "#dce9ff",
+                        "primary-container": "#002366",
+                        "inverse-on-surface": "#eaf1ff",
+                        "background": "#f8f9ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-surface-variant": "#444650",
+                        "tertiary": "#001237",
+                        "on-tertiary": "#ffffff",
+                        "success-electric": "#10B981",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#758dd5",
+                        "secondary-container": "#fe6500",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-secondary-fixed": "#360f00",
+                        "on-tertiary-fixed-variant": "#00419e",
+                        "text-heading": "#0F172A",
+                        "surface-container": "#e5eeff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#dae2ff",
+                        "outline": "#757682",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#b1c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "inverse-primary": "#b3c5ff",
+                        "on-secondary-container": "#541d00",
+                        "outline-variant": "#c5c6d2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-variant": "#d3e4fe",
+                        "primary": "#00113a",
+                        "on-tertiary-container": "#5f8cf3",
+                        "inverse-surface": "#213145",
+                        "on-tertiary-fixed": "#001946",
+                        "on-primary-fixed": "#00174a",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh-gradient {
+            background-image: radial-gradient(at 0% 0%, #f8f9ff 0%, transparent 50%),
+                              radial-gradient(at 100% 0%, #e5eeff 0%, transparent 50%),
+                              radial-gradient(at 100% 100%, #f8f9ff 0%, transparent 50%),
+                              radial-gradient(at 0% 100%, #d3e4fe 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface-technical font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface-lowest dark:bg-surface-container-highest docked full-width top-0 border-b border-muted dark:border-outline-variant shadow-sm z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed uppercase tracking-tighter">VIZCAYA</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-secondary font-bold pb-1 font-title-md text-title-md" href="#">Empresa</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-title-md text-title-md" href="#">Productos</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-title-md text-title-md" href="#">Servicios</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-title-md text-title-md" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-secondary-container text-on-primary font-bold px-6 py-2 rounded-lg hover:opacity-90 transition-all active:scale-95">
+                    Cotizar Proyecto
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary overflow-hidden py-24 md:py-32">
+
+<div class="relative max-w-container-max mx-auto px-margin-desktop z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="text-on-primary">
+<span class="inline-block bg-secondary px-3 py-1 rounded text-label-md font-label-md mb-6 uppercase tracking-widest">Liderazgo Industrial</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">
+                        Trayectoria, Confianza y Soluciones Eléctricas
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-xl">
+                        Somos su aliado estratégico en materiales eléctricos e ingeniería. Respaldados por el Grupo Empresarial Vizcaya, garantizamos calidad en cada conexión.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                            Explorar Soluciones <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="relative rounded-2xl overflow-hidden border-4 border-surface-container-low/20 shadow-2xl">
+<img class="w-full h-[500px] object-cover" data-alt="A professional close-up shot of high-grade industrial electrical copper wires with vibrant blue, green, and yellow insulation, organized and glowing under soft studio lighting. The background is a clean, technical engineering workshop atmosphere with subtle blue and orange bokeh. The image has a crisp, high-end corporate feel that emphasizes precision and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCazef-4H2aZpo5zmbRC3I1rrx2qcMdDAY6-7QnfMXZRbUFYPXn6HDeGwxI7a87_CaWHwCW28u_ZwrXK3RcGTa1cNYv6BnmwJmJFDpKpMhPUhoTITAHAB9esOG3qQMsrsVFo7PlAqvbhn9QzM81ElWL5_1ex5BbPqpnPj1YaUR3YPiuONaQZM1XiQZLajrhFCh_lQJU7q40mQHthAVvbZhvrRnUPfpO0mD-CCjazjMkRf6TIhlD3DCHJZKEP6-6HMmX-3AJDQsz6Sk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- History/Mission Bento Grid -->
+<section class="py-24 bg-surface-technical">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Text Block -->
+<div class="md:col-span-7 bg-surface-container-lowest p-12 rounded-xl shadow-sm border border-border-muted">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 border-l-4 border-secondary pl-6">Nuestra Esencia Corporativa</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                En <span class="font-bold text-primary">Ferre Eléctricos Vizcaya</span>, no solo suministramos materiales; construimos las bases de la infraestructura moderna. Como parte fundamental del <span class="font-bold text-secondary">Grupo Empresarial Vizcaya</span>, heredamos una tradición de excelencia que combina la ingeniería de vanguardia con un compromiso inquebrantable con el cliente.
+                            </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                Nuestra misión es proveer soluciones integrales que transformen retos técnicos en éxitos operacionales, garantizando la seguridad y eficiencia en cada hogar e industria que tocamos.
+                            </p>
+<div class="flex gap-8 pt-6">
+<div class="flex flex-col">
+<span class="font-bold text-primary text-title-md">Visión</span>
+<span class="text-on-surface-variant">Liderar la transición hacia sistemas eléctricos inteligentes en la región.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-primary text-title-md">Propósito</span>
+<span class="text-on-surface-variant">Conectar comunidades a través de energía segura y sostenible.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats / Identity Cards -->
+<div class="md:col-span-5 grid grid-rows-2 gap-gutter">
+<div class="bg-primary p-8 rounded-xl flex items-center gap-6">
+<div class="bg-secondary-container w-16 h-16 rounded-full flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-title-md">Respaldo Total</h3>
+<p class="text-on-primary-container text-body-md">Garantía de calidad certificada en más de 4,000 productos.</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-xl border border-primary-container/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">lightbulb</span>
+<h3 class="text-primary font-bold text-title-md">Asesoría Especializada</h3>
+</div>
+<p class="text-on-surface-variant text-body-md">Expertos en ingeniería eléctrica listos para optimizar cada etapa de su proyecto, desde el diseño hasta la ejecución.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Statistics -->
+<section class="py-20 bg-primary-container text-on-primary overflow-hidden relative">
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'wght' 700;">electric_bolt</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div>
+<div class="font-display-lg text-display-lg text-secondary mb-2">25+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider">Años de Experiencia</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-secondary mb-2">4k+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider">Productos en Catálogo</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-secondary mb-2">12k+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider">Clientes Satisfechos</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-secondary mb-2">500+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider">Proyectos de Ingeniería</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Gallery -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Infraestructura y Soluciones</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Visualice el alcance de nuestro trabajo en sectores industriales, comerciales y residenciales de alta exigencia.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Project 1 -->
+<div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Wide shot of a high-tech industrial electrical substation with gleaming metal structures and large transformers. The scene is shot during the golden hour, casting a warm glow over the technical equipment. The sky is a deep blue, and the entire composition exudes strength and engineering precision in a modern light-mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfkBovsl9xcO4kBnTPIS0V0mxaCJMhLyV9e0FrK-Q3oQvo2pPISY0PZaDYaqlqUjMpZ_pMxktlWtQB1uQlrxTJu5oWDdySiqT-0woy8saSQL8MbqRElWpCK90fqmm7c4hhtwBLGeTzFp8Grqi1B4riAfM_xnylS5BZhYVOvflkuyQBxomzVShYbP46gG5k_ynkgt3-HNWHO_ux_BNzuIU_mORQ9uq35hygJoc0_W4hd_nqX4sPHPDjsRz5PoCN9SECsaniqoGGiNQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-bold text-label-md uppercase">Sector Industrial</span>
+<h4 class="text-white font-bold text-title-md">Sistemas de Potencia</h4>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Interior of a modern, minimalist commercial building featuring advanced LED lighting systems and architectural electrical integration. The space is bright and clean with white surfaces and sleek metallic accents. The lighting is crisp and cool-toned, highlighting the professional atmosphere. Corporate high-end photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVs5INEYx7X7FIfJtz1IfuB5GF-sAWqAAsyr_eD4dZA7B-VRRD9MW1pOmig37HlhWeTvuA1nWMacW52Lc1bljOH1kdZBioi0gkvdUu_il8nPs8XEh-VGDNstxAPqiTFMFrlHpgXaW6Zu2roaroTIZp4ntALURH3Re4e0A0EMBSQxTNEg19Gmu9h5k81iyZG97-PNFMpWjD35OHyEE032QJeGW22MjXdvb7i1hzdPEZuSWBZFVIOgyHSUcCR43okuEZrTiMn2-PUDQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-bold text-label-md uppercase">Sector Comercial</span>
+<h4 class="text-white font-bold text-title-md">Iluminación Arquitectónica</h4>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A detailed view of a professional residential electrical panel, perfectly organized with neatly labeled breakers and color-coded wiring. The background is a clean white wall. The shot is well-lit and sharp, emphasizing safety, organization, and technical expertise in home electrical systems. Modern light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hzEyGfZLBO43CD4d_V5hn7ei1c-OdG2rUtXGP5c4VpXohWMgnkxdhUQSpzIilXI3eDLL7Ct_7AzLVAR6d6drK2YRTL8urvI_P4Koy070tyA9iUlheR1srpQZzA7QdO6HJdwKLy_GCtp0rMiomTx0eaa3lZxUGpab3BFZqkwWt0qJJkDueQcSjrD9O2tmaCDfiPtxnhRncyY_pPkD2n4-SDNNKaxTGzKCBcqyPnow-f6yeRLwn-jD93R15XmnjsrIgqmQueWn5hc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-bold text-label-md uppercase">Sector Residencial</span>
+<h4 class="text-white font-bold text-title-md">Instalaciones Inteligentes</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-surface-container-low rounded-[2rem] p-12 md:p-24 text-center relative overflow-hidden border border-primary/5">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">¿Listo para potenciar su éxito?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                        Inicie su próximo proyecto con el respaldo de los expertos. Ofrecemos cotizaciones personalizadas y consultoría técnica sin compromiso.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-secondary text-white px-10 py-5 rounded-xl font-bold text-title-md hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-3">
+                            Hablemos de tu próximo proyecto
+                            <span class="material-symbols-outlined">chat</span>
+</button>
+<button class="bg-transparent border-2 border-primary text-primary px-10 py-5 rounded-xl font-bold text-title-md hover:bg-primary hover:text-white transition-all">
+                            Ver Catálogo
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary-container full-width border-t-0 shadow-none">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter w-full px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 max-w-xs">
+<span class="font-title-md text-title-md text-on-primary font-black uppercase">FERRE ELÉCTRICOS VIZCAYA</span>
+<p class="text-primary-fixed-dim font-body-md text-body-md">Su aliado estratégico en soluciones eléctricas de alta ingeniería para Colombia y Venezuela.</p>
+<div class="flex gap-4 mt-4">
+<a class="text-primary-fixed-dim hover:text-on-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-primary-fixed-dim hover:text-on-primary" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-primary-fixed-dim hover:text-on-primary" href="#"><span class="material-symbols-outlined">phone</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="text-secondary-fixed font-semibold uppercase text-label-md">Empresa</span>
+<nav class="flex flex-col gap-2">
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-secondary-container" href="#">Nuestra Historia</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-secondary-container" href="#">Sedes</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-secondary-container" href="#">Newsletter</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-secondary-fixed font-semibold uppercase text-label-md">Legal</span>
+<nav class="flex flex-col gap-2">
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-secondary-container" href="#">Aviso Legal</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-secondary-container" href="#">Privacidad</a>
+</nav>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/10 w-full px-margin-desktop py-6 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-primary-fixed-dim font-body-md text-body-md">© 2024 Ferre Eléctricos Vizcaya. Todos los derechos reservados.</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-bold">Unidos por la energía.</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>
