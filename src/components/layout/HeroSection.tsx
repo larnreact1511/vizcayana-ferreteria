@@ -1,6 +1,33 @@
+import type { ReactNode } from 'react'
 import Badge from '../ui/Badge'
 import Button from '../ui/Button'
 import ScrollReveal from '../ui/ScrollReveal'
+
+interface CtaItem {
+  label: string
+  variant?: string
+  to?: string
+  href?: string
+  icon?: string
+}
+
+interface BadgeInfo {
+  text: string
+  icon?: string
+  variant?: string
+}
+
+interface HeroSectionProps {
+  badge?: string | BadgeInfo
+  title: string
+  description?: string
+  ctas?: CtaItem[]
+  image?: string
+  imageAlt?: string
+  centered?: boolean
+  children?: ReactNode
+  className?: string
+}
 
 export default function HeroSection({
   badge,
@@ -12,7 +39,7 @@ export default function HeroSection({
   centered = false,
   children,
   className = '',
-}) {
+}: HeroSectionProps) {
   return (
     <section className={`relative py-24 md:py-32 overflow-hidden bg-primary ${className}`}>
       <div className={`relative z-10 container-page ${centered ? 'text-center' : ''}`}>

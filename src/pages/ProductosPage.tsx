@@ -1,4 +1,4 @@
-﻿import { useState } from "react"
+﻿import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { PRODUCTS, PRODUCT_CATEGORIES, HERO_PRODUCTOS } from "../data/productos"
 import HeroSection from "../components/layout/HeroSection"
 import Section from "../components/layout/Section"
@@ -8,8 +8,8 @@ import Button from "../components/ui/Button"
 import SectionHeader from "../components/ui/SectionHeader"
 import ScrollReveal from "../components/ui/ScrollReveal"
 
-function ProductImage({ src, alt, category }) {
-  const [error, setError] = useState(false)
+function ProductImage({ src, alt, category }: { src: string; alt: string; category: string }) {
+  const [error, setError] = useState<boolean>(false)
   const initials = alt.split(" ").slice(0, 2).map(w => w[0]).join("")
 
   if (error || !src) {
@@ -42,8 +42,8 @@ function ProductImage({ src, alt, category }) {
 }
 
 export default function ProductosPage() {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [activeCategory, setActiveCategory] = useState("Todos")
+  const [searchTerm, setSearchTerm] = useState<string>('')
+  const [activeCategory, setActiveCategory] = useState<string>('Todos')
 
   const filtered = PRODUCTS.filter((p) => {
     const matchCategory = activeCategory === "Todos" || p.category === activeCategory

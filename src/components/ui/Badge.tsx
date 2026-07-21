@@ -1,4 +1,15 @@
-export default function Badge({ children, icon, variant = 'default', className = '' }) {
+import type { ReactNode } from 'react'
+
+type BadgeVariant = 'default' | 'solid' | 'outline'
+
+interface BadgeProps {
+  children: ReactNode
+  icon?: string
+  variant?: BadgeVariant
+  className?: string
+}
+
+export default function Badge({ children, icon, variant = 'default', className = '' }: BadgeProps) {
   const variants = {
     default:
       'bg-secondary-container/20 text-secondary-fixed border border-secondary-container/30',
