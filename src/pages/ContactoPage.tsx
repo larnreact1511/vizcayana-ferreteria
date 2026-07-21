@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { HERO_CONTACTO, CONTACT_INFO, FAQS } from '../data/contacto'
 import HeroSection from '../components/layout/HeroSection'
 import Section from '../components/layout/Section'
@@ -7,8 +7,16 @@ import Button from '../components/ui/Button'
 import SectionHeader from '../components/ui/SectionHeader'
 import ScrollReveal from '../components/ui/ScrollReveal'
 
-function FAQItem({ question, answer }) {
-  const [open, setOpen] = useState(false)
+interface FormState {
+  name: string
+  email: string
+  phone: string
+  message: string
+  reason: string
+}
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState<boolean>(false)
 
   return (
     <div className="border-b border-border-muted last:border-0">
@@ -32,13 +40,13 @@ function FAQItem({ question, answer }) {
 }
 
 export default function ContactoPage() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', reason: 'cotizacion' })
+  const [form, setForm] = useState<FormState>({ name: '', email: '', phone: '', message: '', reason: 'cotizacion' })
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     alert('Gracias por contactarnos. Le responderemos en menos de 24 horas.')
     setForm({ name: '', email: '', phone: '', message: '', reason: 'cotizacion' })

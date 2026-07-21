@@ -1,4 +1,19 @@
-export const PRODUCTS = [
+export interface Product {
+  id: string
+  name: string
+  category: string
+  image: string
+  description: string
+}
+
+export interface HeroProductos {
+  badge: { icon: string; text: string }
+  title: string
+  description: string
+  ctas: { label: string; variant: string }[]
+}
+
+export const PRODUCTS: Product[] = [
   {
     id: 'cables',
     name: 'Cables y Conductores',
@@ -57,7 +72,7 @@ export const PRODUCTS = [
   },
 ]
 
-export const PRODUCT_CATEGORIES = [
+export const PRODUCT_CATEGORIES: string[] = [
   'Todos',
   'Conductores Eléctricos',
   'Protecciones Eléctricas',
@@ -69,7 +84,7 @@ export const PRODUCT_CATEGORIES = [
   'Energías Renovables',
 ]
 
-export const HERO_PRODUCTOS = {
+export const HERO_PRODUCTOS: HeroProductos = {
   badge: { icon: 'inventory_2', text: 'CATÁLOGO TÉCNICO' },
   title: 'Materiales Eléctricos de Alta Ingeniería',
   description:

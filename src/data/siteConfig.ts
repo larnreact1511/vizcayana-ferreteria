@@ -1,3 +1,19 @@
+export interface NavLink {
+  path: string
+  label: string
+}
+
+export interface FooterLink {
+  label: string
+  path: string
+}
+
+export interface SocialLink {
+  icon: string
+  label: string
+  href: string
+}
+
 export const SITE = {
   name: 'VIZCAYA',
   fullName: 'Ferre Eléctricos Vizcaya',
@@ -5,14 +21,19 @@ export const SITE = {
   copyright: '© 2024 Ferre Eléctricos Vizcaya. Todos los derechos reservados.',
 }
 
-export const NAV_LINKS = [
+export const NAV_LINKS: NavLink[] = [
   { path: '/', label: 'Empresa' },
   { path: '/productos', label: 'Productos' },
   { path: '/servicios', label: 'Servicios' },
   { path: '/contacto', label: 'Contacto' },
 ]
 
-export const FOOTER = {
+export const FOOTER: {
+  empresa: FooterLink[]
+  servicios: FooterLink[]
+  legal: FooterLink[]
+  social: SocialLink[]
+} = {
   empresa: [
     { label: 'Nosotros', path: '/' },
     { label: 'Grupo Vizcaya', path: '#' },

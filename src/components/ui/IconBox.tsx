@@ -1,4 +1,11 @@
-export default function IconBox({ icon, size = 'md', variant = 'secondary', className = '' }) {
+interface IconBoxProps {
+  icon: string
+  size?: 'sm' | 'md' | 'lg'
+  variant?: 'secondary' | 'primary' | 'light'
+  className?: string
+}
+
+export default function IconBox({ icon, size = 'md', variant = 'secondary', className = '' }: IconBoxProps) {
   const sizes = {
     sm: 'w-10 h-10 text-xl',
     md: 'w-16 h-16 text-4xl',
