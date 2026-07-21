@@ -1,4 +1,22 @@
-export const HERO_CONTACTO = {
+export interface ContactInfoItem {
+  icon: string
+  title: string
+  lines: string[]
+}
+
+export interface FAQItem {
+  q: string
+  a: string
+}
+
+export interface HeroContacto {
+  badge: { icon: string; text: string }
+  title: string
+  description: string
+  ctas: { label: string; variant: string; icon: string; href: string }[]
+}
+
+export const HERO_CONTACTO: HeroContacto = {
   badge: { icon: 'connect_without_contact', text: 'ATENCIÓN PERSONALIZADA' },
   title: 'Conectemos para su Próximo Proyecto',
   description:
@@ -9,7 +27,7 @@ export const HERO_CONTACTO = {
   ],
 }
 
-export const CONTACT_INFO = [
+export const CONTACT_INFO: ContactInfoItem[] = [
   {
     icon: 'location_on',
     title: 'Sede Principal',
@@ -37,7 +55,7 @@ export const CONTACT_INFO = [
   },
 ]
 
-export const FAQS = [
+export const FAQS: FAQItem[] = [
   {
     q: '¿Ofrecen envíos a toda Colombia?',
     a: 'Sí, contamos con cobertura nacional. Despachamos a todas las ciudades principales en 24-48 horas hábiles.',

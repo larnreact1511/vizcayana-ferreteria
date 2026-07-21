@@ -1,15 +1,36 @@
 import { SITE } from './siteConfig'
 
+export interface Stat {
+  id: string
+  value: string
+  label: string
+}
+
+export interface Project {
+  id: string
+  category: string
+  title: string
+  image: string
+}
+
+export interface HeroData {
+  badge: string
+  title: string
+  description: string
+  primaryCta: { label: string; to: string; icon: string }
+  image?: string
+}
+
 export { SITE }
 
-export const STATS = [
+export const STATS: Stat[] = [
   { id: 'experience', value: '25+', label: 'Años de Experiencia' },
   { id: 'catalog', value: '4k+', label: 'Productos en Catálogo' },
   { id: 'clients', value: '12k+', label: 'Clientes Satisfechos' },
   { id: 'projects', value: '500+', label: 'Proyectos de Ingeniería' },
 ]
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     id: 'industrial',
     category: 'Sector Industrial',
