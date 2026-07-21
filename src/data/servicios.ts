@@ -1,4 +1,38 @@
-export const SERVICES = [
+export interface ServiceItem {
+  id: string
+  icon: string
+  title: string
+  description: string
+  layout: 'large' | 'tall' | 'small'
+  dark?: boolean
+  filledIcon?: boolean
+  features?: string[]
+  image?: string
+  link?: { label: string; href: string }
+}
+
+export interface BadgeData {
+  icon: string
+  text: string
+  variant?: string
+}
+
+export interface CtaData {
+  label: string
+  variant: string
+  to?: string
+  href?: string
+  icon?: string
+}
+
+export interface DistributionItem {
+  country: string
+  city: string
+  link: string
+  linkLabel: string
+}
+
+export const SERVICES: ServiceItem[] = [
   {
     id: 'supply',
     icon: 'inventory_2',
@@ -39,9 +73,9 @@ export const SERVICES = [
   },
 ]
 
-export const BRANDS = ['PHILIPS', 'SCHNEIDER', 'SIEMENS', 'ABB', 'GENERAL ELECTRIC']
+export const BRANDS: string[] = ['PHILIPS', 'SCHNEIDER', 'SIEMENS', 'ABB', 'GENERAL ELECTRIC']
 
-export const HERO_SERVICIOS = {
+export const HERO_SERVICIOS: { badge: BadgeData; title: string; description: string; ctas: CtaData[] } = {
   badge: { icon: 'engineering', text: 'EXPERTOS EN ENERGÍA' },
   title: 'Soluciones Integrales para la Industria y el Hogar',
   description:
@@ -52,7 +86,7 @@ export const HERO_SERVICIOS = {
   ],
 }
 
-export const DISTRIBUTION = [
+export const DISTRIBUTION: DistributionItem[] = [
   {
     country: 'Colombia',
     city: 'Sede Principal Bogotá',

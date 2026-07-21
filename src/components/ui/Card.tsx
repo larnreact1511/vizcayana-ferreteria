@@ -1,4 +1,15 @@
-export default function Card({ children, variant = 'default', className = '', hover = false, ...props }) {
+import type { ReactNode, HTMLAttributes } from 'react'
+
+type CardVariant = 'default' | 'glass' | 'dark' | 'tinted'
+
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode
+  variant?: CardVariant
+  className?: string
+  hover?: boolean
+}
+
+export default function Card({ children, variant = 'default', className = '', hover = false, ...props }: CardProps) {
   const variants = {
     default:
       'bg-surface-container-lowest rounded-xl shadow-card border border-border-muted',

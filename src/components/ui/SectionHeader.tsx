@@ -1,9 +1,13 @@
-export default function SectionHeader({
-  title,
-  description,
-  className = '',
-  children,
-}) {
+import type { ReactNode } from 'react'
+
+interface SectionHeaderProps {
+  title: string
+  description?: string
+  className?: string
+  children?: ReactNode
+}
+
+export default function SectionHeader({ title, description, className = '', children }: SectionHeaderProps) {
   return (
     <div className={`text-center mb-16 ${className}`}>
       {children}

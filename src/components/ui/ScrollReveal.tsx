@@ -1,7 +1,12 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 
-export default function ScrollReveal({ children, className = '' }) {
-  const ref = useRef(null)
+interface ScrollRevealProps {
+  children: ReactNode
+  className?: string
+}
+
+export default function ScrollReveal({ children, className = '' }: ScrollRevealProps) {
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(

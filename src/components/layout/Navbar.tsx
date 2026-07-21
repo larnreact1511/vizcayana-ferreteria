@@ -5,9 +5,9 @@ import Button from '../ui/Button'
 
 export default function Navbar() {
   const location = useLocation()
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false)
 
-  const isActive = (path) => {
+  const isActive = (path: string): boolean => {
     if (path === '/') return location.pathname === '/'
     return location.pathname.startsWith(path)
   }
